@@ -1,63 +1,94 @@
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jhoana, ¿quieres ser mi San Valentín?</title>
+    <title>Para Jhoana ❤️</title>
     <style>
         body {
             text-align: center;
             font-family: Arial, sans-serif;
-            background-color: #ffcccb;
+            background-color: pink;
+            overflow: hidden;
+            color: black;
         }
-        .container {
-            margin-top: 100px;
+        h1 {
+            color: black;
+            margin-top: 50px;
+            animation: heartbeat 1.5s infinite ease-in-out;
         }
-        .buttons {
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+        .sticker {
+            width: 150px;
+            margin-top: 20px;
+        }
+        .btn-container {
             margin-top: 20px;
             position: relative;
         }
         .btn {
             font-size: 20px;
             padding: 10px 20px;
-            border: none;
+            margin: 10px;
             cursor: pointer;
+            border: none;
+            border-radius: 10px;
         }
         .yes {
-            background-color: #4CAF50;
-            color: white;
+            background-color: lightgreen;
         }
         .no {
-            background-color: #f44336;
-            color: white;
+            background-color: lightcoral;
             position: absolute;
+        }
+        .heart {
+            position: absolute;
+            color: red;
+            font-size: 20px;
+            animation: float 5s infinite ease-in-out;
+        }
+        @keyframes float {
+            0% { transform: translateY(0); opacity: 1; }
+            100% { transform: translateY(-600px); opacity: 0; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Jhoana, ¿quieres ser mi San Valentín? 💘</h1>
-        <div class="buttons">
-            <button class="btn yes" onclick="aceptar()">Sí</button>
-            <button class="btn no" id="botonNo">No</button>
-        </div>
-        <p id="mensaje" style="font-size: 24px; font-weight: bold; margin-top: 20px;"></p>
+    <h1>Jhoana, ¿quieres ser mi San Valentín? ❤️</h1>
+    <img src="sticker.png" alt="Sticker lindo" class="sticker">
+    <div class="btn-container">
+        <button class="btn yes" onclick="accept()">Sí 😍</button>
+        <button class="btn no" onmouseover="moveNoButton()">No 😢</button>
     </div>
-
+    <audio autoplay loop>
+        <source src="tu-cancion-romantica.mp3" type="audio/mpeg">
+        Tu navegador no soporta audio.
+    </audio>
     <script>
-        function moverBoton() {
-            let botonNo = document.getElementById("botonNo");
-            let x = Math.random() * (window.innerWidth - 100);
-            let y = Math.random() * (window.innerHeight - 50);
-            botonNo.style.left = `${x}px`;
-            botonNo.style.top = `${y}px`;
+        function moveNoButton() {
+            const noBtn = document.querySelector('.no');
+            const x = Math.random() * (window.innerWidth - 100);
+            const y = Math.random() * (window.innerHeight - 50);
+            noBtn.style.left = `${x}px`;
+            noBtn.style.top = `${y}px`;
         }
-
-        function aceptar() {
-            document.getElementById("mensaje").innerText = "¡Sabía que dirías que sí!\nTE AMO FLAQUI ❤️";
+        function accept() {
+            alert('¡Sabía que dirías que sí! ❤️ Te amo 😘');
         }
-
-        document.getElementById("botonNo").addEventListener("mouseover", moverBoton);
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.innerHTML = '❤️';
+            heart.style.left = Math.random() * window.innerWidth + 'px';
+            heart.style.top = window.innerHeight + 'px';
+            document.body.appendChild(heart);
+            setTimeout(() => heart.remove(), 5000);
+        }
+        setInterval(createHeart, 500);
     </script>
 </body>
 </html>
-
