@@ -60,27 +60,28 @@
     
    <script>
         function aceptar() {
-          var cajaMensaje = document.createElement("div");
-        cajaMensaje.innerHTML = "¡Sabía que dirías que sí! 💕🥰 TE VEO EN EL RETIRO";
- cajaMensaje.style.position = "fixed";
-        cajaMensaje.style.bottom = "-100px";
-        cajaMensaje.style.left = "50%";
-        cajaMensaje.style.transform = "translateX(-50%)";
-        cajaMensaje.style.backgroundColor = "pink";
-        cajaMensaje.style.padding = "20px";
-        cajaMensaje.style.borderRadius = "10px";
-        cajaMensaje.style.fontSize = "20px";
-        cajaMensaje.style.color = "white";
-        cajaMensaje.style.fontWeight = "bold";
-        cajaMensaje.style.textAlign = "center";
-        cajaMensaje.style.transition = "bottom 1s ease";
+         var mensaje = document.createElement("div");
+        mensaje.innerHTML = "¡Sabía que dirías que sí! 💕🥰 TE VEO EN EL RETIRO";
+        
+        
+        mensaje.style.fontSize = "20px";
+        mensaje.style.fontWeight = "bold";
+        mensaje.style.color = "pink";
+        mensaje.style.textAlign = "center";
+        mensaje.style.marginTop = "20px";
+        mensaje.style.opacity = "0"; 
+        mensaje.style.transition = "all 1s ease"; 
+        
+    
+        document.body.appendChild(mensaje);
 
-            document.body.appendChild(cajaMensaje);
-
-            etTimeout(function() {
-            cajaMensaje.style.bottom = "20px";
+      
+        setTimeout(function() {
+            mensaje.style.opacity = "1";
+            mensaje.style.fontSize = "30px"; // Aumentar el tamaño del texto para que "crezca"
         }, 100);
-        }
+
+    }
 
 
         function moverBoton() {
