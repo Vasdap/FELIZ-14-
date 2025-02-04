@@ -60,9 +60,26 @@
     
    <script>
         function aceptar() {
-           var mensaje = document.getElementById("mensaje");
-        mensaje.innerHTML = "¡Sabía que dirías que sí! 💕🥰 TE VEO EN EL RETIRO";
+          var cajaMensaje = document.createElement("div");
+        cajaMensaje.innerHTML = "¡Sabía que dirías que sí! 💕🥰 TE VEO EN EL RETIRO";
+ cajaMensaje.style.position = "fixed";
+        cajaMensaje.style.bottom = "-100px";
+        cajaMensaje.style.left = "50%";
+        cajaMensaje.style.transform = "translateX(-50%)";
+        cajaMensaje.style.backgroundColor = "pink";
+        cajaMensaje.style.padding = "20px";
+        cajaMensaje.style.borderRadius = "10px";
+        cajaMensaje.style.fontSize = "20px";
+        cajaMensaje.style.color = "white";
+        cajaMensaje.style.fontWeight = "bold";
+        cajaMensaje.style.textAlign = "center";
+        cajaMensaje.style.transition = "bottom 1s ease";
 
+            document.body.appendChild(cajaMensaje);
+
+            etTimeout(function() {
+            cajaMensaje.style.bottom = "20px";
+        }, 100);
         }
 
 
