@@ -60,7 +60,7 @@
     
    <script>
         function aceptar() {
-            document.getElementById("mensaje").innerHTML = "¡Sabía que dirías que sí! 💕🥰";
+            document.getElementById("mensaje").innerHTML = "¡Sabía que dirías que sí! 💕🥰 TE VEO EN EL RETIRO";
         }
 
 
