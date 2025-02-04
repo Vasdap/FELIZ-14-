@@ -3,99 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Para Jhoana ❤️</title>
+    <title>San Valentín para Jhoana</title>
     <style>
         body {
+            background-color: #f8c8dc;
             text-align: center;
             font-family: Arial, sans-serif;
-            background-color: pink;
-            overflow: hidden;
-            color: black;
+            animation: fadeIn 2s ease-in-out;
+            position: relative;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
         h1 {
-            color: black;
-            margin-top: 50px;
-            animation: heartbeat 1.5s infinite ease-in-out;
+            color: #d63384;
+            font-size: 2em;
+            margin-top: 20vh;
+            animation: bounce 1.5s infinite;
         }
-        @keyframes heartbeat {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.2); }
-            100% { transform: scale(1); }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
         }
-        .sticker {
-            width: 150px;
-            margin-top: 20px;
-        }
-        .btn-container {
-            margin-top: 20px;
+        .buttons {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
             position: relative;
         }
         .btn {
-            font-size: 20px;
+            font-size: 1.5em;
             padding: 10px 20px;
-            margin: 10px;
-            cursor: pointer;
             border: none;
+            cursor: pointer;
             border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        .btn:hover {
+            transform: scale(1.1);
         }
         .yes {
-            background-color: lightgreen;
+            background-color: #ff69b4;
+            color: white;
         }
         .no {
-            background-color: lightcoral;
-            position: absolute;
-            transition: transform 0.2s ease-in-out;
+            background-color: #ffcccb;
+            color: black;
+            position: relative;
         }
         .heart {
             position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 5em;
             color: red;
-            font-size: 20px;
-            animation: float 5s infinite ease-in-out;
+            animation: heartbeat 1s infinite;
         }
-        @keyframes float {
-            0% { transform: translateY(0); opacity: 1; }
-            100% { transform: translateY(-600px); opacity: 0; }
+        @keyframes heartbeat {
+            0%, 100% { transform: translateX(-50%) scale(1); }
+            50% { transform: translateX(-50%) scale(1.2); }
         }
     </style>
 </head>
 <body>
-    <h1>Jhoana, ¿quieres ser mi San Valentín? ❤️</h1>
-    <img src="sticker.png" alt="Sticker lindo" class="sticker">
-    <div class="btn-container">
-        <button class="btn yes" onclick="accept()">Sí 😍</button>
-        <button class="btn no" onmousemove="moveNoButton()">No 😢</button>
+    <div class="heart">❤️</div>
+    <h1>HOLA FLAQUI, ¿QUIERES SER MI CITA PARA EL 14 DE FEBRERO? DI QUE SI PORFA</h1>
+    <div class="buttons">
+        <button class="btn yes" onclick="alert('¡Sabía que dirías que sí! 💖')">Sí</button>
+        <button class="btn no" id="noBtn">No</button>
     </div>
-    <audio autoplay loop>
-        <source src="tu-cancion-romantica.mp3" type="audio/mpeg">
-        Tu navegador no soporta audio.
-    </audio>
+    
     <script>
-        function moveNoButton() {
-            const noBtn = document.querySelector('.no');
-            const x = Math.random() * (window.innerWidth - 100);
-            const y = Math.random() * (window.innerHeight - 50);
-            noBtn.style.transform = `translate(${x}px, ${y}px)`;
-        }
-        function accept() {
-            alert('¡Sabía que dirías que sí! ❤️ Te amo 😘');
-        }
-        function createHeart() {
-            const heart = document.createElement('div');
-            heart.classList.add('heart');
-            heart.innerHTML = '❤️';
-            heart.style.left = Math.random() * window.innerWidth + 'px';
-            heart.style.top = window.innerHeight + 'px';
-            document.body.appendChild(heart);
-            setTimeout(() => heart.remove(), 5000);
-        }
-        setInterval(createHeart, 500);
-    </script>
-</body>
-</html>
-
-            setTimeout(() => heart.remove(), 5000);
-        }
-        setInterval(createHeart, 500);
+        document.getElementById("noBtn").addEventListener("mouseover", function() {
+            let x = Math.random() * (window.innerWidth - this.offsetWidth);
+            let y = Math.random() * (window.innerHeight - this.offsetHeight);
+            this.style.left = `${x}px`;
+            this.style.top = `${y}px`;
+        });
     </script>
 </body>
 </html>
