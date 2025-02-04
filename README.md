@@ -1,83 +1,84 @@
-<!DOCTYPE html>
+
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pedirle ser mi San Valentín</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Jhoana, ¿quieres ser mi San Valentín?</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #ffcccb;
+            background-image: url('2a8cd4e2029644a3d8cdcfa279e97c60.jpg'); /* Fondo de capibara */
+            background-size: cover;
+            background-position: center;
+        }
+        .container {
+            margin-top: 100px;
+        }
+        .buttons {
+            margin-top: 20px;
+            position: relative;
+        }
+        .btn {
+            font-size: 20px;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        .yes {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .no {
+            background-color: #f44336;
+            color: white;
+            position: absolute;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            margin-top: 20px;
+            padding: 10px;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <h1 id="titulo">HOLA FLAQUI, ¿QUIERES SER MI CITA PARA EL 14 DE FEBRERO? DI QUE SI PORFA</h1>
-        <div class="botones">
-            <button id="no" class="boton">NO</button>
-            <button id="si" class="boton">SI</button>
+        <h1>Jhoana, ¿quieres ser mi San Valentín? 💘</h1>
+        <div class="buttons">
+            <button class="btn yes" onclick="aceptar()">Sí</button>
+            <button class="btn no" id="botonNo">No</button>
+        </div>
+        <p id="mensaje" style="font-size: 24px; font-weight: bold; margin-top: 20px;"></p>
+        <div class="gallery">
+            <img src="WhatsApp Image 2025-02-03 at 8.07.19 PM (2).jpeg" alt="Foto 1">
+            <img src="WhatsApp Image 2025-02-03 at 8.07.17 PM (2).jpeg" alt="Foto 2">
+            <img src="imagen3.jpg" alt="Foto 3">
+            <img src="imagen4.jpg" alt="Foto 4">
         </div>
     </div>
-    <script src="script.js"></script>
+
+    <script>
+        function moverBoton() {
+            let botonNo = document.getElementById("botonNo");
+            let x = Math.random() * (window.innerWidth - 100);
+            let y = Math.random() * (window.innerHeight - 50);
+            botonNo.style.left = `${x}px`;
+            botonNo.style.top = `${y}px`;
+        }
+
+        function aceptar() {
+            document.getElementById("mensaje").innerText = "¡Sabía que dirías que sí!\nTE AMO FLAQUI ❤️";
+        }
+
+        document.getElementById("botonNo").addEventListener("mouseover", moverBoton);
+    </script>
 </body>
 </html>
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    background-color: #FADCD9; /* Color rosado bebé */
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    overflow: hidden;
-}
-
-.container {
-    text-align: center;
-}
-
-h1 {
-    font-size: 2.5rem;
-    color: #D86A6A;
-    animation: moverTitulo 2s ease-in-out;
-}
-
-@keyframes moverTitulo {
-    0% { transform: translateX(-100%); }
-    50% { transform: translateX(0); }
-    100% { transform: translateX(100%); }
-}
-
-.botones {
-    margin-top: 20px;
-}
-
-.boton {
-    background-color: #D86A6A;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: transform 0.3s, background-color 0.3s;
-}
-
-.boton:hover {
-    transform: scale(1.1);
-    background-color: #F5A9A9;
-}
-
-#no {
-    position: relative;
-}
-
-#no.mover {
-    position: absolute;
-    left: 100vw;
-    transition: left 0.5s ease-out;
-}
-
-const botonNo = document.getElementById('no');
-const botonSi = document
