@@ -63,7 +63,6 @@
         // Cambiar el texto de la página
         document.getElementById("mensaje").innerHTML = "¡Sabía que dirías que sí! 💕🥰";
         
-        // Puedes agregar alguna animación si lo deseas
         document.getElementById("mensaje").style.fontSize = "30px";
         document.getElementById("mensaje").style.color = "pink";
         document.getElementById("mensaje").style.transition = "all 0.5s ease";
