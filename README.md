@@ -8,7 +8,7 @@
         body {
             text-align: center;
             background: pink;
-            background-image: url('https://www.transparenttextures.com/patterns/hearts.png');
+            background-image: url('https://img.freepik.com/vector-premium/capibara-mas-grande-mundo_867743-599.jpg?w=740');
             background-size: cover;
             font-family: Arial, sans-serif;
         }
