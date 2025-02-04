@@ -6,7 +6,7 @@
     <title>Para Jhoana 💖</title>
     <style>
         body {
-            text-align: center;
+            text-align: above;
             background: pink;
             background-image: url('https://img.freepik.com/vector-premium/capibara-mas-grande-mundo_867743-599.jpg?w=740');
             background-size: cover;
