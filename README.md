@@ -57,12 +57,7 @@
             <button class="btn no" id="botonNo">No</button>
         </div>
         <p id="mensaje" style="font-size: 24px; font-weight: bold; margin-top: 20px;"></p>
-        <div class="gallery">
-            <img src="WhatsApp Image 2025-02-03 at 8.07.19 PM (2).jpeg" alt="Foto 1">
-            <img src="WhatsApp Image 2025-02-03 at 8.07.17 PM (2).jpeg" alt="Foto 2">
-            <img src="imagen3.jpg" alt="Foto 3">
-            <img src="imagen4.jpg" alt="Foto 4">
-        </div>
+        
     </div>
 
     <script>
