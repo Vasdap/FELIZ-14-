@@ -58,18 +58,12 @@
         </div>
     </div>
     
-    <script>
-    function aceptar() {
-        // Cambiar el texto de la página
-        document.getElementById("mensaje").innerHTML = "¡Sabía que dirías que sí! 💕🥰";
-        
-        document.getElementById("mensaje").style.fontSize = "30px";
-        document.getElementById("mensaje").style.color = "pink";
-        document.getElementById("mensaje").style.transition = "all 0.5s ease";
-    }
-</script>
+   <script>
+        function aceptar() {
+            alert("¡Sabía que dirías que sí! 💕🥰");
+        }
 
-        
+
         function moverBoton() {
             let noButton = document.querySelector('.no');
             let x = Math.random() * (window.innerWidth - 100);
