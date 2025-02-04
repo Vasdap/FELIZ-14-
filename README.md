@@ -8,7 +8,7 @@
         body {
             text-align: above;
             background: pink;
-            background-image: url('https://img.freepik.com/vector-premium/capibara-mas-grande-mundo_867743-599.jpg?w=740');
+            background-image: url('https://media.istockphoto.com/id/2153094727/es/vector/couple-of-capybaras-in-love.jpg?s=612x612&w=0&k=20&c=LFLcTkAwwHOy2eTH49b3n9C9F5pWTrNngETgBJ3VPAc=');
             background-size: cover;
             font-family: Arial, sans-serif;
         }
