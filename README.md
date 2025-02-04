@@ -66,7 +66,7 @@
         
         mensaje.style.fontSize = "20px";
         mensaje.style.fontWeight = "bold";
-        mensaje.style.color = "pink";
+        mensaje.style.color = "black";
         mensaje.style.textAlign = "center";
         mensaje.style.marginTop = "20px";
         mensaje.style.opacity = "0"; 
