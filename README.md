@@ -1,4 +1,3 @@
-<FELIZ 14 DE FEBRERO>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -9,9 +8,6 @@
             text-align: center;
             font-family: Arial, sans-serif;
             background-color: #ffcccb;
-            background-image: url('2a8cd4e2029644a3d8cdcfa279e97c60.jpg'); /* Fondo de capibara */
-            background-size: cover;
-            background-position: center;
         }
         .container {
             margin-top: 100px;
@@ -35,18 +31,6 @@
             color: white;
             position: absolute;
         }
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 10px;
-            margin-top: 20px;
-            padding: 10px;
-        }
-        .gallery img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
     </style>
 </head>
 <body>
@@ -57,16 +41,6 @@
             <button class="btn no" id="botonNo">No</button>
         </div>
         <p id="mensaje" style="font-size: 24px; font-weight: bold; margin-top: 20px;"></p>
-        <div class="gallery">
-            <img src="WhatsApp Image 2025-02-03 at 8.07.19 PM (2).jpeg" alt="Foto 1![WhatsApp Image 2025-02-03 at 8 07 18 PM (2)](https://github.com/user-attachments/assets/ae302649-b137-4eb9-b633-1fb84df91e66)
-" >
-            <img src="WhatsApp Image 2025-02-03 at 8.07.17 PM (2).jpeg" alt="Foto 2"![WhatsApp Image 2025-02-03 at 8 07 19 PM](https://github.com/user-attachments/assets/5dca7474-d665-43cf-82af-d6c74573724c)
- >
-            <img src="imagen3.jpg" alt="Foto 3"![WhatsApp Image 2025-02-03 at 8 07 17 PM (2)](https://github.com/user-attachments/assets/6b8d3975-6c52-4ff0-88e0-e7ebcc4d6646)>
-
-            <img src="imagen4.jpg" alt="Foto 4"![WhatsApp Image 2025-02-03 at 8 07 19 PM (1)](https://github.com/user-attachments/assets/f71e2dc2-07a8-4065-ba4f-57e9aa9e6790)
- >
-        </div>
     </div>
 
     <script>
@@ -86,3 +60,4 @@
     </script>
 </body>
 </html>
+
