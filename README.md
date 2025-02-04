@@ -1,52 +1,51 @@
-# SAN-VALENTIN
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Para Jhoana 💖</title>
+    <title>Jhoana, ¿quieres ser mi San Valentín?</title>
     <style>
         body {
             text-align: center;
-            background: pink;
-            background-image: url('https://www.transparenttextures.com/patterns/hearts.png');
-            background-size: cover;
             font-family: Arial, sans-serif;
+            background-color: #ffcccb;
+            background-image: url('2a8cd4e2029644a3d8cdcfa279e97c60.jpg'); /* Fondo de capibara */
+            background-size: cover;
+            background-position: center;
         }
         .container {
             margin-top: 100px;
-            background: rgba(255, 255, 255, 0.8);
-            padding: 20px;
-            border-radius: 10px;
-            display: inline-block;
-        }
-        h1 {
-            color: #ff3366;
-            font-size: 3rem;
         }
         .buttons {
             margin-top: 20px;
+            position: relative;
         }
         .btn {
-            font-size: 1.5rem;
+            font-size: 20px;
             padding: 10px 20px;
-            margin: 10px;
             border: none;
-            border-radius: 10px;
             cursor: pointer;
-            transition: 0.3s;
         }
         .yes {
-            background-color: #ff3366;
+            background-color: #4CAF50;
             color: white;
-        }
-        .yes:hover {
-            background-color: #ff6699;
         }
         .no {
-            background-color: #666;
+            background-color: #f44336;
             color: white;
             position: absolute;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            margin-top: 20px;
+            padding: 10px;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
         }
     </style>
 </head>
@@ -54,23 +53,32 @@
     <div class="container">
         <h1>Jhoana, ¿quieres ser mi San Valentín? 💘</h1>
         <div class="buttons">
-            <button class="btn yes" onclick="aceptar()">¡Sí! 💖</button>
-            <button class="btn no" onmouseover="moverBoton()">No 😢</button>
+            <button class="btn yes" onclick="aceptar()">Sí</button>
+            <button class="btn no" id="botonNo">No</button>
+        </div>
+        <p id="mensaje" style="font-size: 24px; font-weight: bold; margin-top: 20px;"></p>
+        <div class="gallery">
+            <img src="WhatsApp Image 2025-02-03 at 8.07.19 PM (2).jpeg" alt="Foto 1">
+            <img src="WhatsApp Image 2025-02-03 at 8.07.17 PM (2).jpeg" alt="Foto 2">
+            <img src="imagen3.jpg" alt="Foto 3">
+            <img src="imagen4.jpg" alt="Foto 4">
         </div>
     </div>
-    
+
     <script>
-        function aceptar() {
-            alert("¡Sabía que dirías que sí! 💕🥰");
-        }
-        
         function moverBoton() {
-            let noButton = document.querySelector('.no');
+            let botonNo = document.getElementById("botonNo");
             let x = Math.random() * (window.innerWidth - 100);
             let y = Math.random() * (window.innerHeight - 50);
-            noButton.style.left = `${x}px`;
-            noButton.style.top = `${y}px`;
+            botonNo.style.left = `${x}px`;
+            botonNo.style.top = `${y}px`;
         }
+
+        function aceptar() {
+            document.getElementById("mensaje").innerText = "¡Sabía que dirías que sí!\nTE AMO FLAQUI ❤️";
+        }
+
+        document.getElementById("botonNo").addEventListener("mouseover", moverBoton);
     </script>
 </body>
 </html>
