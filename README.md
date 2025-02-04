@@ -51,7 +51,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>Jhoana, ¿quieres ser mi San Valentín? 💘</h1>
+        <h1>Hola amor, ¿quieres ser mi San Valentín? 💘</h1>
         <div class="buttons">
             <button class="btn yes" onclick="aceptar()">¡Sí! 💖</button>
             <button class="btn no" onmouseover="moverBoton()">No 😢</button>
