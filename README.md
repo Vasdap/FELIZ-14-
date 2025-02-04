@@ -61,7 +61,7 @@
    <script>
         function aceptar() {
          var mensaje = document.createElement("div");
-        mensaje.innerHTML = "¡Sabía que dirías que sí! 💕🥰 TE VEO EN EL RETIRO";
+        mensaje.innerHTML = "¡Sabía que dirías que sí! 💕🥰 TE AMOOOOOO, nos vemos pronto en el retiro";
         
         
         mensaje.style.fontSize = "20px";
