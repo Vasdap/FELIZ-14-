@@ -9,7 +9,7 @@
             text-align: center;
             background: pink;
             background-image: url('https://media.istockphoto.com/id/2153094727/es/vector/couple-of-capybaras-in-love.jpg?s=612x612&w=0&k=20&c=LFLcTkAwwHOy2eTH49b3n9C9F5pWTrNngETgBJ3VPAc=');
-            background-size: cover;
+            background-size: video;
             font-family: Arial, sans-serif;
         }
         .container {
