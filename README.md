@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -9,9 +9,6 @@
             text-align: center;
             font-family: Arial, sans-serif;
             background-color: #ffcccb;
-            background-image: url('2a8cd4e2029644a3d8cdcfa279e97c60.jpg'); /* Fondo de capibara */
-            background-size: cover;
-            background-position: center;
         }
         .container {
             margin-top: 100px;
@@ -35,18 +32,6 @@
             color: white;
             position: absolute;
         }
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 10px;
-            margin-top: 20px;
-            padding: 10px;
-        }
-        .gallery img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
     </style>
 </head>
 <body>
@@ -57,7 +42,6 @@
             <button class="btn no" id="botonNo">No</button>
         </div>
         <p id="mensaje" style="font-size: 24px; font-weight: bold; margin-top: 20px;"></p>
-        
     </div>
 
     <script>
