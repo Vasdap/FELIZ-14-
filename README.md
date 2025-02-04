@@ -3,32 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jhoana, ¿quieres ser mi San Valentín?</title>
+    <title>Para Jhoana 💖</title>
     <style>
         body {
             text-align: center;
+            background: pink;
+            background-image: url('https://www.transparenttextures.com/patterns/hearts.png');
+            background-size: cover;
             font-family: Arial, sans-serif;
-            background-color: #ffcccb;
         }
         .container {
             margin-top: 100px;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+        h1 {
+            color: #ff3366;
+            font-size: 3rem;
         }
         .buttons {
             margin-top: 20px;
-            position: relative;
         }
         .btn {
-            font-size: 20px;
+            font-size: 1.5rem;
             padding: 10px 20px;
+            margin: 10px;
             border: none;
+            border-radius: 10px;
             cursor: pointer;
+            transition: 0.3s;
         }
         .yes {
-            background-color: #4CAF50;
+            background-color: #ff3366;
             color: white;
         }
+        .yes:hover {
+            background-color: #ff6699;
+        }
         .no {
-            background-color: #f44336;
+            background-color: #666;
             color: white;
             position: absolute;
         }
@@ -38,26 +53,23 @@
     <div class="container">
         <h1>Jhoana, ¿quieres ser mi San Valentín? 💘</h1>
         <div class="buttons">
-            <button class="btn yes" onclick="aceptar()">Sí</button>
-            <button class="btn no" id="botonNo">No</button>
+            <button class="btn yes" onclick="aceptar()">¡Sí! 💖</button>
+            <button class="btn no" onmouseover="moverBoton()">No 😢</button>
         </div>
-        <p id="mensaje" style="font-size: 24px; font-weight: bold; margin-top: 20px;"></p>
     </div>
-
+    
     <script>
+        function aceptar() {
+            alert("¡Sabía que dirías que sí! 💕🥰");
+        }
+        
         function moverBoton() {
-            let botonNo = document.getElementById("botonNo");
+            let noButton = document.querySelector('.no');
             let x = Math.random() * (window.innerWidth - 100);
             let y = Math.random() * (window.innerHeight - 50);
-            botonNo.style.left = `${x}px`;
-            botonNo.style.top = `${y}px`;
+            noButton.style.left = `${x}px`;
+            noButton.style.top = `${y}px`;
         }
-
-        function aceptar() {
-            document.getElementById("mensaje").innerText = "¡Sabía que dirías que sí!\nTE AMO FLAQUI ❤️";
-        }
-
-        document.getElementById("botonNo").addEventListener("mouseover", moverBoton);
     </script>
 </body>
 </html>
