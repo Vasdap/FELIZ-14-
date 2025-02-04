@@ -44,6 +44,7 @@
         .no {
             background-color: lightcoral;
             position: absolute;
+            transition: transform 0.2s ease-in-out;
         }
         .heart {
             position: absolute;
@@ -62,7 +63,7 @@
     <img src="sticker.png" alt="Sticker lindo" class="sticker">
     <div class="btn-container">
         <button class="btn yes" onclick="accept()">Sí 😍</button>
-        <button class="btn no" onmouseover="moveNoButton()">No 😢</button>
+        <button class="btn no" onmousemove="moveNoButton()">No 😢</button>
     </div>
     <audio autoplay loop>
         <source src="tu-cancion-romantica.mp3" type="audio/mpeg">
@@ -73,8 +74,7 @@
             const noBtn = document.querySelector('.no');
             const x = Math.random() * (window.innerWidth - 100);
             const y = Math.random() * (window.innerHeight - 50);
-            noBtn.style.left = `${x}px`;
-            noBtn.style.top = `${y}px`;
+            noBtn.style.transform = `translate(${x}px, ${y}px)`;
         }
         function accept() {
             alert('¡Sabía que dirías que sí! ❤️ Te amo 😘');
@@ -86,6 +86,13 @@
             heart.style.left = Math.random() * window.innerWidth + 'px';
             heart.style.top = window.innerHeight + 'px';
             document.body.appendChild(heart);
+            setTimeout(() => heart.remove(), 5000);
+        }
+        setInterval(createHeart, 500);
+    </script>
+</body>
+</html>
+
             setTimeout(() => heart.remove(), 5000);
         }
         setInterval(createHeart, 500);
