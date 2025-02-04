@@ -69,7 +69,7 @@
         mensaje.style.color = "black";
         mensaje.style.textAlign = "center";
         mensaje.style.marginTop = "20px";
-        mensaje.style.opacity = "0"; 
+        mensaje.style.opacity = "1"; 
         mensaje.style.transition = "all 1s ease"; 
         
     
