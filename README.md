@@ -70,9 +70,11 @@
     </style>
 </head>
 <body>
-    <div class="heart">❤️</div>
+ 
     <h1>HOLA FLAQUI, ¿QUIERES SER MI CITA PARA EL 14 DE FEBRERO? DI QUE SI PORFA</h1>
     <div class="buttons">
+
+   <div class="heart">❤️</div>
         <button class="btn yes" onclick="alert('¡Sabía que dirías que sí! 💖')">Sí</button>
         <button class="btn no" id="noBtn">No</button>
     </div>
